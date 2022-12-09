@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Example() {
+const Example = () => {
     return (
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card">
-                        <div className="card-header">Table Component</div>
 
-                        <div className="card-body">I'm an Table component!</div>
+                    <table className="table table-hover">
+                        <thead>
+                            <tr>
+                            <th scope="col" width="100px">#</th>
+                            <th scope="col" width="100px">Name</th>
+                            <th scope="col" width="100px">Salary</th>
+                            <th scope="col" width="100px">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     </div>
                 </div>
             </div>
