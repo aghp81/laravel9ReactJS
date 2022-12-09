@@ -12,9 +12,14 @@ class Table  extends Component{
         }
     }
 
+
+    
+
     //Get Employee list.
     getEmployeeList = () => {
-
+        axios.get('get/employee/list').then(function(response) {
+            console.log(response);
+        })
     }
 
 
