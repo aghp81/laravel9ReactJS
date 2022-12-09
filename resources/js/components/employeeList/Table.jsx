@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
+import TableRow from './TableRow';
 
 class Table  extends Component{
 
@@ -45,12 +46,11 @@ class Table  extends Component{
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                </tr>
+                                {this.state.employees.map(function(x, i) {
+                                    return <TableRow key={i} data={x} />
+                                })}
+                                
+                                
                             </tbody>
                         </table>
     
