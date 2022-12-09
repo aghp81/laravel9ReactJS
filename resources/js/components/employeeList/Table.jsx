@@ -13,7 +13,10 @@ class Table  extends Component{
     }
 
 
-    
+    //Life Cycle Method.
+    componentDidMount() {
+        this.getEmployeeList();
+    }
 
     //Get Employee list.
     getEmployeeList = () => {
