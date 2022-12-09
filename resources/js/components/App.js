@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Table from './employeeList/Table';
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
         <div className="container">
             <div className="row justify-content-center">
                 {/* Components Goes here */}
+                <Table />
             </div>
         </div>
     );
