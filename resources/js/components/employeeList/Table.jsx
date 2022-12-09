@@ -21,8 +21,9 @@ class Table  extends Component{
 
     //Get Employee list.
     getEmployeeList = () => {
+        let self = this;
         axios.get('get/employee/list').then(function(response) {
-            this.setState({
+            self.setState({
                 employees: response.data
             });
         });

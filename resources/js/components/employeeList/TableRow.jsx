@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom/client';
 
 class TableRow  extends Component{
 
@@ -11,9 +10,9 @@ class TableRow  extends Component{
     render() {
         return(
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+                <th scope="row">{ this.props.data.id }</th>
+                <td>{ this.props.data.employee_name }</td>
+                <td>{ this.props.data.salary }</td>
                 <td>@mdo</td>
             </tr>
         )
