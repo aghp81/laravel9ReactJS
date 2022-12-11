@@ -30,6 +30,13 @@ class UpdateModal  extends Component{
                                     value={ this.state.employeeName ?? "" }
                                 />
                             </div>
+
+                            <div className="form-group">
+                                <input type="text" 
+                                    id="employeeSalary"
+                                    value={ this.state.employeeSalary ?? "" }
+                                />
+                            </div>
                         </form>
                     </div>
                     <div className="modal-footer">
