@@ -16,10 +16,12 @@ class TableActionButtons  extends Component{
                 
                 
 
-                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                onClick={ () => { this.getEmployeeDetails(this.props.eachRowId) } }
+                >
                     View
                 </button>
-                <ViewModal />
+                <ViewModal modalId={ this.props.eachRowId } />
 
 
 
