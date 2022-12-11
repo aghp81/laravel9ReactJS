@@ -22,6 +22,15 @@ class UpdateModal  extends Component{
         });
     }
 
+    // Update Employee Salary State.
+
+    inputEmployeeSalary = (event) => {
+        this.setState({
+            employeeSalary: event.target.value,
+
+        });
+    }
+
     updateEmployeeData = () => {
 
     }
@@ -49,6 +58,7 @@ class UpdateModal  extends Component{
                                 <input type="text" 
                                     id="employeeSalary"
                                     value={ this.state.employeeSalary ?? "" }
+                                    onChange={this.inputEmployeeSalary}
                                 />
                             </div>
                         </form>
