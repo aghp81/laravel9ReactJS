@@ -42,7 +42,7 @@ class TableActionButtons  extends Component{
                 >
                     View
                 </button>
-                <ViewModal modalId={ this.props.eachRowId } />
+                <ViewModal modalId={ this.props.eachRowId } employeeData={ this.staet } />
 
 
 
