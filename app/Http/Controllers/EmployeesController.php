@@ -25,4 +25,11 @@ class EmployeesController extends Controller
         }
     }
 
+    /*  Get Individual employee details.  */
+
+    public function getEmployeeDetails(Request $request)
+    {
+
+    }
+
 }
