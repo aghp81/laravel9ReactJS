@@ -41,9 +41,9 @@ class UpdateModal  extends Component{
                     </div>
                     <div className="modal-footer">
                         <input type="submit"
-                            className='' 
-                            id="employeeSalary"
-                            value={ this.state.employeeSalary ?? "" }
+                            className="btn btn-info" 
+                            value="Update"
+                            onClick={this.updateEmployeeData}
                         />
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
