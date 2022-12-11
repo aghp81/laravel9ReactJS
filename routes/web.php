@@ -21,3 +21,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('get/employee/list', 
     [EmployeesController::class, 'getEmployeeList'])->name('employee.list');
+
+    
+Route::post('/gst/individual/employee/details', 
+    [EmployeesController::class, 'getEmployeeDetails'])->name('employee.details');
