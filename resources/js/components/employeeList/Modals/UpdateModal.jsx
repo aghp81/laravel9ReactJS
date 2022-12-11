@@ -5,6 +5,12 @@ class UpdateModal  extends Component{
 
     constructor(props){
         super(props);
+
+        this.state = {
+            employeeName: null,
+            employeeSalary: null
+
+        }
     }
 
     render() {
@@ -21,7 +27,7 @@ class UpdateModal  extends Component{
                             <div className="form-group">
                                 <input type="text" 
                                     id="employeeName"
-                                    value=""
+                                    value={ this.state.employeeName ?? "" }
                                 />
                             </div>
                         </form>
