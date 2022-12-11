@@ -37,7 +37,10 @@ class TableActionButtons  extends Component{
                 
                 
 
-                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target={ '#viewModal'+this.props.eachRowId }
+                <button type="button" 
+                className="btn btn-primary" 
+                data-bs-toggle="modal" 
+                data-bs-target={ '#viewModal'+this.props.eachRowId }
                 onClick={ () => { this.getEmployeeDetails(this.props.eachRowId) } }
                 >
                     View
@@ -46,10 +49,17 @@ class TableActionButtons  extends Component{
 
 
 
-                <button type="button" className="btn btn-info">Update</button>
+                <button type="button" 
+                className="btn btn-info"
+                data-bs-toggle="modal" 
+                data-bs-target={ '#updateModal'+this.props.eachRowId }
+                onClick={() => { this.getEmployeeDetails(this.props.eachRowId) } }
+                >
+                    Update
+                </button>
 
 
-                
+
                 <button type="button" className="btn btn-danger">Delete</button>
             </div>
         )
