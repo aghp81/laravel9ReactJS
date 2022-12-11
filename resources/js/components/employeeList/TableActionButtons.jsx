@@ -9,6 +9,13 @@ class TableActionButtons  extends Component{
         super(props);
     }
 
+
+    //Getting Individual employee data.
+    getEmployeeDetails = () => {
+
+    }
+
+
     render() {
         return(
             <div className="btn-group" role="group">
