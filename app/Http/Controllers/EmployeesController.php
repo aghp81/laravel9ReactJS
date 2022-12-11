@@ -32,7 +32,7 @@ class EmployeesController extends Controller
         try
         {
             $employeeData = Employee::findOrFail($request -> get('employeeId'));
-            return response()-> json($employees);
+            return response()-> json($employeeData);
         }
         catch(Exception $e)
         {
