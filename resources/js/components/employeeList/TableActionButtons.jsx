@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 import ViewModal from './Modals/ViewModal';
 
@@ -11,8 +12,12 @@ class TableActionButtons  extends Component{
 
 
     //Getting Individual employee data.
-    getEmployeeDetails = () => {
-
+    getEmployeeDetails = (id) => {
+        axios.post('/gst/individual/employee/details', {
+            employeeId: id
+        }).then((response) => {
+            console.log(response.data);
+        })
     }
 
 
