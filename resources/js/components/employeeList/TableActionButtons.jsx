@@ -58,6 +58,7 @@ class TableActionButtons  extends Component{
                 >
                     Update
                 </button>
+                <UpdateModal modalId={ this.props.eachRowId } employeeData={ this.state }  />
 
 
 
