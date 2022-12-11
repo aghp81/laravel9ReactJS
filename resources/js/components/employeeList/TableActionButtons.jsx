@@ -8,6 +8,11 @@ class TableActionButtons  extends Component{
 
     constructor(props){
         super(props);
+
+        this.state = {
+            currontEmployeeName: null,
+            currentEmployeeSalary: null,
+        }
     }
 
 
@@ -16,6 +21,10 @@ class TableActionButtons  extends Component{
         axios.post('/gst/individual/employee/details', {
             employeeId: id
         }).then((response) => {
+            this.setState({
+                currontEmployeeName: response.data.employee_name,
+                currentEmployeeSalary: response.data.salary,
+            })
             console.log(response.data);
         })
     }
