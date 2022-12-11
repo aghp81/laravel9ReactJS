@@ -13,6 +13,19 @@ class UpdateModal  extends Component{
         }
     }
 
+    // Updating Employee Name State
+
+    inputEmployeeName = (event) => {
+        this.setState({
+            employeeName: event.target.value,
+
+        });
+    }
+
+    updateEmployeeData = () => {
+
+    }
+
     render() {
         return(
             <div className="modal fade" id={ "updateModal"+this.props.modalId } tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -28,6 +41,7 @@ class UpdateModal  extends Component{
                                 <input type="text" 
                                     id="employeeName"
                                     value={ this.state.employeeName ?? "" }
+                                    onChange={this.inputEmployeeName}
                                 />
                             </div>
 
