@@ -31,6 +31,23 @@ class UpdateModal  extends Component{
         });
     }
 
+    static getDerivedStateFromProps(props, current_state){
+        let employeeUpdate = {
+            employeeName: null,
+            employeeSalary: null,
+        }
+
+        if(current_state.employeeName !== props.employeeData.currentEmployeeName) {
+            employeeUpdate.employeeName = props.employeeData.currentEmployeeName;
+        }
+
+        if(current_state.employeeSalary !== props.employeeData.currentEmployeeSalary) {
+            employeeUpdate.employeeSalary = props.employeeData.currentEmployeeSalary;
+        }
+
+        return employeeUpdate;
+    }
+
     updateEmployeeData = () => {
 
     }
