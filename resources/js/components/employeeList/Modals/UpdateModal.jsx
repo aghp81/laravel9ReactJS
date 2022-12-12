@@ -76,8 +76,9 @@ class UpdateModal  extends Component{
             employeeId: this.props.modalId,
             employeeName: this.state.employeeName,
             employeeSalary: this.state.employeeSalary,
-        }).then(() => {
-            location.reload();
+        }).then((response) => {
+            console.log(response);
+            // /location.reload();
         })
     }
 
