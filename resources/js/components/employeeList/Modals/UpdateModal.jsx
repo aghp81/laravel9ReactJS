@@ -37,6 +37,22 @@ class UpdateModal  extends Component{
             employeeSalary: null,
         }
 
+
+        // Updating data from input.
+
+        if(current_state.employeeName && (current_state.employeeName !== props.employeeData.currentEmployeeName)){
+            return null;
+        }
+
+        if(current_state.employeeSalary && (current_state.employeeSalary !== props.employeeData.currentEmployeeSalary)){
+            return null;
+        }
+
+
+
+
+        // Updateing datafrom props Below.
+
         if(current_state.employeeName !== props.employeeData.currentEmployeeName) {
             employeeUpdate.employeeName = props.employeeData.currentEmployeeName;
         }
