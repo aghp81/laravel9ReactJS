@@ -11,7 +11,7 @@ class TableActionButtons  extends Component{
         super(props);
 
         this.state = {
-            currontEmployeeName: null,
+            currentEmployeeName: null,
             currentEmployeeSalary: null,
         }
     }
@@ -23,7 +23,7 @@ class TableActionButtons  extends Component{
             employeeId: id
         }).then((response) => {
             this.setState({
-                currontEmployeeName: response.data.employee_name,
+                currentEmployeeName: response.data.employee_name,
                 currentEmployeeSalary: response.data.salary,
             })
             console.log(response.data);

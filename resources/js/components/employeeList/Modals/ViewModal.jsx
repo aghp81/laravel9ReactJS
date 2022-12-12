@@ -17,7 +17,7 @@ class ViewModal  extends Component{
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        Name: <strong>{ this.props.employeeData.currontEmployeeName }</strong>
+                        Name: <strong>{ this.props.employeeData.currentEmployeeName }</strong>
                         <hr/>
                         Salary: <strong>{ this.props.employeeData.currentEmployeeSalary }</strong>
                     </div>

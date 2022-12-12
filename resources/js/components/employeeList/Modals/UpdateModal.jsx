@@ -13,6 +13,45 @@ class UpdateModal  extends Component{
         }
     }
 
+    // Updating Employee Name State
+
+    inputEmployeeName = (event) => {
+        this.setState({
+            employeeName: event.target.value,
+
+        });
+    }
+
+    // Update Employee Salary State.
+
+    inputEmployeeSalary = (event) => {
+        this.setState({
+            employeeSalary: event.target.value,
+
+        });
+    }
+
+    static getDerivedStateFromProps(props, current_state){
+        let employeeUpdate = {
+            employeeName: null,
+            employeeSalary: null,
+        }
+
+        if(current_state.employeeName !== props.employeeData.currentEmployeeName) {
+            employeeUpdate.employeeName = props.employeeData.currentEmployeeName;
+        }
+
+        if(current_state.employeeSalary !== props.employeeData.currentEmployeeSalary) {
+            employeeUpdate.employeeSalary = props.employeeData.currentEmployeeSalary;
+        }
+
+        return employeeUpdate;
+    }
+
+    updateEmployeeData = () => {
+
+    }
+
     render() {
         return(
             <div className="modal fade" id={ "updateModal"+this.props.modalId } tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -28,6 +67,7 @@ class UpdateModal  extends Component{
                                 <input type="text" 
                                     id="employeeName"
                                     value={ this.state.employeeName ?? "" }
+                                    onChange={this.inputEmployeeName}
                                 />
                             </div>
 
@@ -35,15 +75,16 @@ class UpdateModal  extends Component{
                                 <input type="text" 
                                     id="employeeSalary"
                                     value={ this.state.employeeSalary ?? "" }
+                                    onChange={this.inputEmployeeSalary}
                                 />
                             </div>
                         </form>
                     </div>
                     <div className="modal-footer">
                         <input type="submit"
-                            className='' 
-                            id="employeeSalary"
-                            value={ this.state.employeeSalary ?? "" }
+                            className="btn btn-info" 
+                            value="Update"
+                            onClick={this.updateEmployeeData}
                         />
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
