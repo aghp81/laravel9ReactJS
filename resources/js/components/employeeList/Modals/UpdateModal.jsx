@@ -53,19 +53,32 @@ class UpdateModal  extends Component{
 
         // Updateing datafrom props Below.
 
-        if(current_state.employeeName !== props.employeeData.currentEmployeeName) {
+        if(current_state.employeeName !== props.employeeData.currentEmployeeName 
+            || 
+        current_state.employeeName === props.employeeData.currentEmployeeName) {
             employeeUpdate.employeeName = props.employeeData.currentEmployeeName;
         }
 
-        if(current_state.employeeSalary !== props.employeeData.currentEmployeeSalary) {
+        if(current_state.employeeSalary !== props.employeeData.currentEmployeeSalary
+            || 
+        current_state.employeeSalary === props.employeeData.currentEmployeeSalary) {
             employeeUpdate.employeeSalary = props.employeeData.currentEmployeeSalary;
         }
 
         return employeeUpdate;
     }
 
-    updateEmployeeData = () => {
 
+    //Updating employee data.
+
+    updateEmployeeData = () => {
+        axios.post('/update/employee/data', {
+            employeeId: this.props.modalId,
+            employeeName: this.state.employeeName,
+            employeeSalary: this.state.employeeSalary,
+        }).then(() => {
+            location.reload();
+        })
     }
 
     render() {
