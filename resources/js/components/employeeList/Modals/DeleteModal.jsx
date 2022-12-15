@@ -33,7 +33,7 @@ class DeleteModal  extends Component{
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        Are you sure, You want to delete this Employee data?
+                        <strong>Are you sure, You want to delete this Employee data?</strong>
                     </div>
                     <div className="modal-footer">
 
