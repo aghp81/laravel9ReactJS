@@ -10,6 +10,7 @@ class DeleteModal  extends Component{
     }
 
     // Delete function for employee data.
+    //employee pass id
 
     deleteEmployeeData = (employee) => {
         axios.delete('/delete/employee/data' + employee).then(() => {
