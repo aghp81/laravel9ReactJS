@@ -56,7 +56,8 @@ class CreateModal  extends Component{
                 <div className='row text-right mb-3 pb-3'>
                     <button className="btn btn-info text-right col-3 offset-md-9"
                     data-toggle="modal"
-                    data-terget="#modalCreate"
+                    data-target="#modalCreate"
+                    
                     >
                         Add New Employee
                     </button>
@@ -91,7 +92,7 @@ class CreateModal  extends Component{
 
                             <input type="button" 
                                 value="Save"
-                                onClick={this.storeEmployeeData()}
+                                onClick={this.storeEmployeeData}
                             />
 
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
