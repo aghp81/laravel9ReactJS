@@ -5,6 +5,12 @@ class CreateModal  extends Component{
 
     constructor(props){
         super(props);
+
+        this.state = {
+            employeeName: null,
+            employeeSalary: null
+
+        }
     }
 
     render() {
