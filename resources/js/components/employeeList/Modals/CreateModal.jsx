@@ -52,44 +52,54 @@ class CreateModal  extends Component{
 
     render() {
         return(
-            <div className="modal fade" id={ "modalCreate" } tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                    <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Employee Details</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                    <form className='form'>
-                            <div className="form-group">
-                                <input type="text" 
-                                    id="employeeName"
-                                    placeholder="Name Here"
-                                    onChange={this.inputEmployeeName}
-                                />
-                            </div>
+            <>
+                <div className='row text-right mb-3 pb-3'>
+                    <button className="btn btn-info text-right col-3 offset-md-9"
+                    data-toggle="modal"
+                    data-terget="#modalCreate"
+                    >
+                        Add New Employee
+                    </button>
+                </div>
+                <div className="modal fade" id={ "modalCreate" } tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Employee Details</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                        <form className='form'>
+                                <div className="form-group">
+                                    <input type="text" 
+                                        id="employeeName"
+                                        placeholder="Name Here"
+                                        onChange={this.inputEmployeeName}
+                                    />
+                                </div>
 
-                            <div className="form-group">
-                                <input type="text" 
-                                    id="employeeSalary"
-                                    placeholder="Salary Here"
-                                    onChange={this.inputEmployeeSalary}
-                                />
-                            </div>
-                        </form>
-                    </div>
-                    <div className="modal-footer">
+                                <div className="form-group">
+                                    <input type="text" 
+                                        id="employeeSalary"
+                                        placeholder="Salary Here"
+                                        onChange={this.inputEmployeeSalary}
+                                    />
+                                </div>
+                            </form>
+                        </div>
+                        <div className="modal-footer">
 
-                        <input type="button" 
-                            value="Save"
-                            onClick={this.storeEmployeeData()}
-                        />
+                            <input type="button" 
+                                value="Save"
+                                onClick={this.storeEmployeeData()}
+                            />
 
-                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </>
         )
     }
 }
