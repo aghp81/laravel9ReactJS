@@ -60,6 +60,12 @@ class CreateModal  extends Component{
                         </form>
                     </div>
                     <div className="modal-footer">
+
+                        <input type="button" 
+                            value="Save"
+                            onClick={this.storeEmployeeData}
+                        />
+
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                     </div>
