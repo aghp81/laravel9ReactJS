@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { toast } from 'react-toastify';
 
 class UpdateModal  extends Component{
 
@@ -76,9 +77,13 @@ class UpdateModal  extends Component{
             employeeId: this.props.modalId,
             employeeName: this.state.employeeName,
             employeeSalary: this.state.employeeSalary,
-        }).then((response) => {
-            console.log(response);
-            // /location.reload();
+        }).then(() => {
+             toast.success("Employee Update Successfully.");
+             setTimeout(() => {
+                location.reload();
+             }, 2500)
+            // console.log(response);
+            // location.reload();
         })
     }
 
