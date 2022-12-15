@@ -20,6 +20,13 @@ class DeleteModal  extends Component{
                         Are you sure, You want to delete this Employee data?
                     </div>
                     <div className="modal-footer">
+
+                        <button type="button" className="btn btn-dangare" data-bs-dismiss="modal"
+                        onClick={() => {this.deleteEmployeeData()}}
+                        >
+                            Yes
+                        </button>
+
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
