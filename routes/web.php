@@ -31,3 +31,6 @@ Route::post('/update/employee/data',
 
 Route::delete('/delete/employee/data/{employee}',
     [EmployeesController::class, 'destroy']);
+
+Route::post('/store/employee/data', 
+    [EmployeesController::class, 'store']);
