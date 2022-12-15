@@ -65,7 +65,7 @@ class TableActionButtons  extends Component{
                 className="btn btn-danger"
                 data-bs-toggle="modal" 
                 data-bs-target={ '#deleteModal'+this.props.eachRowId }
-                onClick={() => { this.getEmployeeDetails(this.props.eachRowId) } }
+                onClick={() => { this.deleteEmployeeData(this.props.eachRowId) } }
                 >
                     Delete
                 </button>

@@ -13,7 +13,7 @@ class DeleteModal  extends Component{
     //employee pass id
 
     deleteEmployeeData = (employee) => {
-        axios.delete('/delete/employee/data' + employee).then(() => {
+        axios.delete('/delete/employee/data/' + employee).then(() => {
             toast.error("Employee Deleted successfully");
 
             setTimeout(() => {
@@ -37,8 +37,8 @@ class DeleteModal  extends Component{
                     </div>
                     <div className="modal-footer">
 
-                        <button type="button" className="btn btn-dangare" data-bs-dismiss="modal"
-                        onClick={() => {this.deleteEmployeeData(this.props.modalId)}}
+                        <button type="button" className="btn btn-danger" data-bs-dismiss="modal"
+                        onClick={ () => {this.deleteEmployeeData(this.props.modalId)}}
                         >
                             Yes
                         </button>
