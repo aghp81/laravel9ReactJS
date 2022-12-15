@@ -1,4 +1,6 @@
+import axios from 'axios';
 import React, { Component } from 'react';
+import { toast } from 'react-toastify';
 
 class CreateModal  extends Component{
 
@@ -30,6 +32,23 @@ class CreateModal  extends Component{
 
         });
     }
+
+    // Storing Employee Data.
+
+    storeEmployeeData = () => {
+        axios.post('/store/employee/data', {
+            employeeName: this.state.employeeName,
+            employeeSalary: this.state.employeeSalary,
+        }).then(() => {
+            toast.success("Employee Saved Successfully.");
+
+            setTimeout(() => {
+                location.reload();
+            },2500)
+        })
+    }
+
+
 
     render() {
         return(
@@ -63,7 +82,7 @@ class CreateModal  extends Component{
 
                         <input type="button" 
                             value="Save"
-                            onClick={this.storeEmployeeData}
+                            onClick={this.storeEmployeeData()}
                         />
 
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
