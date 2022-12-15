@@ -13,6 +13,24 @@ class CreateModal  extends Component{
         }
     }
 
+    // Creating Employee Name State
+
+    inputEmployeeName = (event) => {
+        this.setState({
+            employeeName: event.target.value,
+
+        });
+    }
+
+    // Creating Employee Salary State.
+
+    inputEmployeeSalary = (event) => {
+        this.setState({
+            employeeSalary: event.target.value,
+
+        });
+    }
+
     render() {
         return(
             <div className="modal fade" id={ "modalCreate" } tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
