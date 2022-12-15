@@ -22,7 +22,7 @@ class DeleteModal  extends Component{
                     <div className="modal-footer">
 
                         <button type="button" className="btn btn-dangare" data-bs-dismiss="modal"
-                        onClick={() => {this.deleteEmployeeData()}}
+                        onClick={() => {this.deleteEmployeeData(this.props.modalId)}}
                         >
                             Yes
                         </button>
