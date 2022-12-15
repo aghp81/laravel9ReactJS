@@ -60,9 +60,16 @@ class TableActionButtons  extends Component{
                 </button>
                 <UpdateModal modalId={ this.props.eachRowId } employeeData={ this.state }  />
 
+                <button type="button" 
+                className="btn btn-danger"
+                data-bs-toggle="modal" 
+                data-bs-target={ '#deleteModal'+this.props.eachRowId }
+                onClick={() => { this.getEmployeeDetails(this.props.eachRowId) } }
+                >
+                    Delete
+                </button>
 
 
-                <button type="button" className="btn btn-danger">Delete</button>
             </div>
         )
     }
