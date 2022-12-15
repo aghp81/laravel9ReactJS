@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import ViewModal from './Modals/ViewModal';
 import UpdateModal from './Modals/UpdateModal';
+import DeleteModal from './Modals/DeleteModal';
 
 
 class TableActionButtons  extends Component{
