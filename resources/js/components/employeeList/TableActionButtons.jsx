@@ -69,7 +69,7 @@ class TableActionButtons  extends Component{
                 >
                     Delete
                 </button>
-                <DeleteModal />
+                <DeleteModal modalId={ this.props.eachRowId } employeeData={ this.state } />
 
             </div>
         )
