@@ -61,7 +61,7 @@ class CreateModal  extends Component{
                         Add New Employee
                     </button>
                 </div>
-                <div className="modal fade" id={ "modalCreate" } tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="modalCreate"  tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog">
                         <div className="modal-content">
                         <div className="modal-header">
