@@ -74,6 +74,7 @@ class CreateModal  extends Component{
                                 <div className="form-group">
                                     <input type="text" 
                                         id="employeeName"
+                                        className="form-control mb-3"
                                         placeholder="Name Here"
                                         onChange={this.inputEmployeeName}
                                     />
@@ -82,6 +83,7 @@ class CreateModal  extends Component{
                                 <div className="form-group">
                                     <input type="text" 
                                         id="employeeSalary"
+                                        className="form-control mb-3"
                                         placeholder="Salary Here"
                                         onChange={this.inputEmployeeSalary}
                                     />
@@ -92,6 +94,7 @@ class CreateModal  extends Component{
 
                             <input type="button" 
                                 value="Save"
+                                className="btn btn-info"
                                 onClick={this.storeEmployeeData}
                             />
 
