@@ -69,7 +69,7 @@ class TableActionButtons  extends Component{
                 >
                     Delete
                 </button>
-
+                <DeleteModal />
 
             </div>
         )
